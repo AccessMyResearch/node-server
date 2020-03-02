@@ -1,0 +1,48 @@
+.background{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#nav{
+    margin-top: 5px;
+    position: absolute; 
+    visibility: visible; 
+    right: 300px; 
+    top: 10px;
+}
+li{
+    display: inline;
+    padding: 5px;
+}
+
+
+#conatiner{ 
+    display: table;
+    margin: 0 auto;
+}
+#searchBar{
+ border:#000000 solid;
+ border-width: .2em;
+ border-radius: 30px;
+ padding: 30px 500px 30px 100px;
+ width: 225px;
+}
+
+  
+
+.images
+{
+display: inline;
+margin: 50px;
+padding: 0px;
+}
+
+#content
+{
+display: block;
+position: relative;
+top: 90px;
+height: auto;
+max-width: auto;
+text-align: center;
+}
