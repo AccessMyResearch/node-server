@@ -113,8 +113,9 @@
     <div>
       <p>Response from server dump: 
         <button class="btn btn-primary" @click="fetchData"> Get Data From Server</button>
-        {{}}
+        {{responseData}}
       </p>
+    </div>
   </body>
 </div>
 </template>
