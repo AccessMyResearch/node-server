@@ -1,0 +1,63 @@
+.background {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav {
+    margin-top: 5px;
+    position: absolute;
+    visibility: visible;
+    right: 300px;
+    top: 10px;
+}
+
+.body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.left_column {
+    width: 20%;
+}
+
+.middle_column {
+    width: 60%;
+}
+
+.right_column {
+    width: 20%;
+    float: right;
+}
+
+li {
+    display: inline;
+    padding: 5px;
+}
+
+#container {
+    display: table;
+    margin: 0 auto;
+}
+
+#searchBar {
+    border: .2em solid #000000;
+    border-radius: 30px;
+    padding: 30px 500px 30px 100px;
+    width: 225px;
+}
+
+.images {
+    display: inline;
+    margin: 50px;
+    padding: 0;
+}
+
+#content {
+    display: block;
+    position: relative;
+    top: 90px;
+    height: auto;
+    text-align: center;
+}

@@ -1,5 +1,5 @@
 <template>
-    <div class="DropDownMenu">
+    <div class="DropDownMenu left_column">
         <div class="dropdown">
             <button onclick="dropDownFunction()" class="dropdownbutton">Trending</button>
             <div id="myDropdown" class="filter">
