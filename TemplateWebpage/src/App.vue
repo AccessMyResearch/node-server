@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Main Page</title>
-    
-
   </head>
   <body>
     <app-header></app-header>
@@ -46,11 +44,13 @@
 <script>
   import Header from './components/Header.vue';
   import Options from './components/Options.vue';
+  import Sidebar from './components/Sidebar.vue';
 
   export default {
     components: {
       appHeader: Header,
-      appOptions: Options
+      appOptions: Options,
+      appSideBar: Sidebar
     },
     data() {
       return {

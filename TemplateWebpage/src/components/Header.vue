@@ -1,18 +1,25 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <a class="navbar-brand" href="#">Access My Research</a>
-            <form class="form-inline d-flex dropdown">
+        <nav class="navbar navbar-expand-md navbar-dark header-blue" style="color: white">
+            <a class="navbar-brand" href="#">AMR LOGO</a>
+            <a class="nav-item" style="color: white" href="#"><i class="fas fa-plus"></i></a>
+            <form class="form-inline d-flex dropdown mx-auto">
                 <input class="form-control form-control-sm" type="text" placeholder="Search" id="menu1" data-toggle="dropdown">
-                <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+                <button class="btn btn-secondary btn-sm" type="submit">Search</button>
             </form>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-book-open"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-friends"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-bell"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle"></i></a></li>
-                </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-book-open"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-friends"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-bell"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle"></i></a></li>
+            </ul>
         </nav>
     </div>
 </template>
+
+<style scoped>
+  .header-blue {
+    background-color: #487BBF
+  }
+</style>
