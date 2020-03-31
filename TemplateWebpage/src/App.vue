@@ -9,43 +9,9 @@
         <div class="body">
             <app-options></app-options>
             <div class="DisplayBasicInformation middle_column">
-                <h1>Title of Article</h1>
-                <p>Author One: Name goes Here, Author Two: Name goes Here • DOI: 10.1080/20445911.2020.1736086 • Journal or
-                    something (2020)</p>
-                <hr>
-                <h1>Title of Article</h1>
-                <p>Author One: Name goes Here, Author Two: Name goes Here • DOI: 10.1080/20445911.2020.1736086 • Journal or
-                    something (2020)</p>
-                <hr>
-                <h1>Title of Article</h1>
-                <p>Author One: Name goes Here, Author Two: Name goes Here • DOI: 10.1080/20445911.2020.1736086 • Journal or
-                    something (2020)</p>
-                <hr>
-                <h1>Title of Article</h1>
-                <p>Author One: Name goes Here, Author Two: Name goes Here • DOI: 10.1080/20445911.2020.1736086 • Journal or
-                    something (2020)</p>
-                <hr>
-                <h1>Title of Article</h1>
-                <p>ABSTRACT: The Abstract will go here The Abstract will go here The Abstract will go here The Abstract will
-                    go here The Abstract will go here</p>
-                <p>The Abstract will go here The Abstract will go here The Abstract will go here The Abstract will go here
-                    The Abstract will go here The</p>
-                <p>Abstract will go here The Abstract will go here The Abstract will go here The Abstract will go here The
-                    Abstract will go here The Abstract </p>
-                <p>will go here The Abstract will go here The Abstract will go here The Abstract will go here The Abstract
-                    will go here The Abstract will go here</p>
-                <br>
-                <p>Author One: Name goes Here, Author Two: Name goes Here • DOI: 10.1080/20445911.2020.1736086 • Journal or
-                    something (2020)</p>
+                <app-main-feed></app-main-feed>
                 <hr>
             </div>
-        </div>
-
-        <div>
-            <p>Response from server dump:
-                <button class="btn btn-primary" @click="fetchData"> Get Data From Server</button>
-                {{responseData}}
-            </p>
         </div>
         </body>
     </div>
@@ -58,11 +24,13 @@
 <script>
     import Header from './components/Header.vue';
     import Options from './components/Options.vue';
+    import MainFeed from './components/MainArticleFeed.vue';
 
     export default {
         components: {
             appHeader: Header,
-            appOptions: Options
+            appOptions: Options,
+            appMainFeed: MainFeed
         },
         data() {
             return {
