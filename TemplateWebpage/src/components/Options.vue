@@ -1,63 +1,102 @@
 <template>
-    <div class="DropDownMenu left_column">
-        <div class="dropdown">
-            <button onclick="dropDownFunction()" class="dropdownbutton">Trending</button>
-            <div id="myDropdown" class="filter">
-              <a href="">About</a>
-              <a href="">Base</a>
-              <a href="">Blog</a>
-              <a href="">Contact</a>
-              <a href="">Custom</a>
-              <a href="">Support</a>
-              <a href="">Tools</a>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <button onclick="dropDownFunction2()" class="dropdownbutton">Year</button>
-            <div id="myDropdown2" class="filter">
-              <a href="">2020</a>
-              <a href="">2019</a>
-              <a href="">2018</a>
-              <a href="">2017</a>
-              <a href="">2016</a>
-            </div>
-          </div>
+<div class="sidenav left_column">
+  <button class="dropdown-btn">Trending <i class="fa fa-caret-down"></i>
+    <ul class="filteredOptions" style="clear:both">
+      <li><a href="#">Put some stuff here</a></li>
+      <li><a href="#">Put some stuff here</a></li>
+      <li><a href="#">Put some stuff here</a></li>
+      <li><a href="#">Put some stuff here</a></li>
+      <li><a href="#">Put some stuff here</a></li>
+      <li><a href="#">Put some stuff here</a></li>
+      <li><a href="#">Put some stuff here</a></li>
+    </ul>
+  </button>
 
-          <div class="dropdown">
-            <button onclick="dropDownFunction3()" class="dropdownbutton">Area</button>
-            <div id="myDropdown3" class="filter">
-              <a href="">Computer Science</a>
-              <a href="">Biology</a>
-              <a href="">Criminal Justice</a>
-              <a href="">Physics</a>
-            </div>
-          </div>
+    <button class="dropdown-btn">Year
+    <i class="fa fa-caret-down"></i>
+  </button>
+    <button class="dropdown-btn">Area
+    <i class="fa fa-caret-down"></i>
+      <ul class="filteredOptions">
+        <li><a href="">Computer Science</a></li>
+        <li><a href="">Biology</a></li>
+        <li><a href="">Criminal Justice</a></li>
+        <li><a href="">Physics</a></li>
+      </ul>
+  </button>
+  <button class="dropdown-btn">Database
+    <i class="fa fa-caret-down"></i>
+  </button>
+    <button class="dropdown-btn">Reading List
+    <i class="fa fa-caret-down"></i>
+  </button>
+</div>
 
-          <div class="dropdown">
-            <button onclick="dropDownFunction4()" class="dropdownbutton">Database</button>
-            <div id="myDropdown4" class="filter">
-              <a href="">Put some stuff here</a>
-              <a href="">Put some stuff here</a>
-              <a href="">Put some stuff here</a>
-              <a href="">Put some stuff here</a>
-              <a href="">Put some stuff here</a>
-              <a href="">Put some stuff here</a>
-              <a href="">Put some stuff here</a>
-            </div>
-          </div>
-
-          <div class="dropdown">
-            <button onclick="dropDownFunction5()" class="dropdownbutton">Reading List</button>
-            <div id="myDropdown5" class="filter">
-                <a href="">Put some stuff here</a>
-                <a href="">Put some stuff here</a>
-                <a href="">Put some stuff here</a>
-                <a href="">Put some stuff here</a>
-                <a href="">Put some stuff here</a>
-                <a href="">Put some stuff here</a>
-                <a href="">Put some stuff here</a>
-            </div>
-          </div>
-    </div>
 </template>
+
+<script>
+    export default {
+
+    }
+</script>
+
+<style scoped>
+/* Fixed sidenav, full height */
+.sidenav {
+  width: 20%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+.filteredOptions{
+  font-size: 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+</style>
