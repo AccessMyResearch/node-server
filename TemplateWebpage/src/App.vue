@@ -7,7 +7,7 @@
     <body> 
     <app-header></app-header>
         <div class="body">
-            <app-options></app-options>
+            <app-sidebar></app-sidebar>
             <div class="DisplayBasicInformation middle_column">
                 <app-main-feed></app-main-feed>
                 <hr>
@@ -20,18 +20,18 @@
 </template>
 
 <style scoped>
-    @import "assets/css/mainpage.css";
+     @import "assets/css/mainpage.css";
 </style>
 
 <script>
     import Header from './components/Header.vue';
-    import Options from './components/Options.vue';
+    import Sidebar from './components/Sidebar.vue';
     import MainFeed from './components/MainArticleFeed.vue';
 
     export default {
         components: {
             appHeader: Header,
-            appOptions: Options,
+            appSidebar: Sidebar,
             appMainFeed: MainFeed
         },
         data() {
