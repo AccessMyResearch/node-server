@@ -11,8 +11,6 @@
             <div class="DisplayBasicInformation middle_column">
                 <app-main-feed></app-main-feed>
                 <hr>
-                <button @click="fetchData">Funny Button</button>
-                <p>Fetched Data: {{responseData}}</p>
             </div>
         </div>
     </body>
@@ -37,17 +35,6 @@
         data() {
             return {
                 responseData: ''
-            }
-        },
-        methods: {
-            fetchData() {
-                const t = this;
-                this.$http.get('api/getPublications').then(response => { //insert next part of URL here if needed in the get()
-                    return response.json();
-                }).then(data => {
-                    console.log(data)
-                    t.responseData = data;
-                });
             }
         }
     }

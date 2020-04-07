@@ -48,7 +48,7 @@
           </li>
           <li @mouseover="profiletab = true" @mouseleave="profiletab = false" class="nav-item">
             <a class="nav-link" href="#">
-              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-user-circle fa-lg"></i>
             </a>
             <transition name="fade">
               <ul class="card" v-if="profiletab" @click="profiletab = false">

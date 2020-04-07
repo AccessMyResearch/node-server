@@ -1,12 +1,12 @@
 <template>
-  <div class="card">
+  <div class="card" @click="showArticle = !showArticle">
       <tr class="row">
         <th class="col-sm-11">
           <div class="panel-heading">
             <h5 class="title"><a :href="article.url">{{article.title}}</a></h5>
             <p class="text-muted"> 
                 <span v-for="(author, index) in article.authors">
-                {{author.name}}<span id="author comma" v-if="index != article.authors.length - 1">,</span>
+                {{author}}<span id="author comma" v-if="index != article.authors.length - 1">,</span>
                 </span>
                 | {{article.doi}} | {{article.publicationDate}}</p>
           </div>
