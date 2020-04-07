@@ -42,15 +42,7 @@
         methods: {
             fetchData() {
                 const t = this;
-                this.$http.get('api/getPublications',  {
-          headers: {
-            'Access-Control-Allow-Origin': 'http://3.22.43.19:8080/',
-            'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTIONS, DELETE',
-            'Access-Control-Allow-Headers': 'Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type',
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-        }).then(response => { //insert next part of URL here if needed in the get()
+                this.$http.get('api/getPublications').then(response => { //insert next part of URL here if needed in the get()
                     return response.json();
                 }).then(data => {
                     console.log(data)
