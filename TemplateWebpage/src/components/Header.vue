@@ -25,7 +25,7 @@
         </form>
       </div>
       <div class="right_column">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav menu-tab ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="fas fa-book-open fa-lg"></i>
@@ -73,7 +73,7 @@
                 </li>
               </ul>
             </transition>
-          </li>
+            </li>
         </ul>
       </div>
     </nav>
@@ -101,11 +101,8 @@ export default {
 .navbar {
   min-height: 4px !important;
 }
-  .header-blue {
-    background-color: #487BBF
-  }
 
-  .menu-tab {  
+.menu-tab {  
   font: 14px/1.5;
 }
 
@@ -123,7 +120,7 @@ export default {
 .menu-tab li ul {
   position: absolute;
   right: 0px;
-  top: 59px;
+  top: 48px;
   margin: 0;
   padding: 0;
 }
