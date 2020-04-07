@@ -4,6 +4,7 @@
             <div class="right_column">
                 <a class="navbar-brand" href="#">AMR LOGO</a>
                 <a class="nav-item" style="color: white" href="#"><i class="fas fa-plus"></i></a>
+                <a class="nav-item" style="color: white" href="#"><i class="fas fa-dollar-sign"></i></a>
             </div>
             <div class="middle_column">
                 <form class="form-inline d-flex dropdown mx-auto">
@@ -12,20 +13,94 @@
                 </form>
             </div>
             <div class="right_column">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav menu-tab">
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-book-open"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-friends"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-bell"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle"></i></a></li>
+
+                    <li @mouseover="profiletab = true" @mouseleave="profiletab = false" class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle"></i></a>
+                        <transition name="fade">
+                            <ul class="card" v-if="profiletab" @click="profiletab = false">
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">About</a></li>
+                                <hr>
+                                <li><a href="#">Sign Out</a></li>
+                            </ul>
+                        </transition>
+                    </li>
+
                 </ul>
             </div>
         </nav>
     </div>
 </template>
 
+<script>
+export default {
+      data() {
+      return{
+        profiletab: false
+      }
+  }
+}
+
+</script>
+
 <style scoped>
   .header-blue {
     background-color: #487BBF
   }
+
+  .menu-tab {  
+  font: 14px/1.5;
+}
+
+.menu-tab a {
+  color: rgb(12, 11, 11);
+  text-decoration: none;
+}
+
+.menu-tab li {
+  display:block;
+  float: left;
+  position: relative;
+}
+
+.menu-tab li ul {
+  position: absolute;
+  right: 0px;
+  top: 59px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-tab li ul li {
+  background: rgb(255, 255, 255);
+  min-width: 100px;
+  text-align: right;
+  transition: background .2s;
+}
+
+.menu-tab li ul hr{
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-tab li ul li:hover {
+  background: rgb(117, 117, 117);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+}
 </style>
