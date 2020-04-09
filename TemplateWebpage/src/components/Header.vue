@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-md navbar-dark header-blue" style="color: white">
-      <div class="right_column">
+      <div class="left_column">
         <a class="navbar-brand" href="#">AMR LOGO</a>
         <a class="nav-item" style="color: white" href="#">
           <i class="fas fa-plus fa-lg"></i>
@@ -25,7 +25,7 @@
         </form>
       </div>
       <div class="right_column">
-        <ul class="navbar-nav menu-tab ml-auto">
+        <ul class="navbar-nav menu-tab float-right">
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="fas fa-book-open fa-lg"></i>
