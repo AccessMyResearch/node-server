@@ -3,12 +3,14 @@
     <nav class="navbar navbar-expand-md navbar-dark header-blue" style="color: white">
       <div class="left_column">
         <a class="navbar-brand" href="#">AMR LOGO</a>
-        <a class="nav-item" style="color: white" href="#">
-          <i class="fas fa-plus fa-lg"></i>
-        </a>
-        <a class="nav-item col px-md-3">
-          <i class="fas fa-dollar-sign fa-lg"></i>
-        </a>
+        <div class="navbar-nav float-right">
+          <a class="nav-item" style="color: white" href="#">
+            <i class="fas fa-plus fa-lg"></i>
+          </a>
+          <a class="nav-item col px-md-3">
+            <i class="fas fa-dollar-sign fa-lg"></i>
+          </a>
+        </div>
       </div>
       <div class="middle_column">
         <form class="form-inline d-flex dropdown mx-auto">

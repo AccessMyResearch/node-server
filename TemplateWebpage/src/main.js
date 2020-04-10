@@ -14,6 +14,7 @@ Vue.use(VueRouter);
 // Vue.http.headers.common['Accept'] = 'application/json, text/plain, */*'
 // Vue.http.headers.common['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, Authorization, Access-Control-Allow-Origin'
 
+
 Vue.http.options.root = 'http://3.22.43.19:8080/'; //insert root URL here
 
 new Vue({
