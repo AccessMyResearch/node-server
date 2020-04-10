@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import articles from '../TestData/articles';
 import Article from './Article.vue';
 
 export default {
@@ -31,3 +30,7 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    
+</style>

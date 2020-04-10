@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-md navbar-dark header-blue" style="color: white">
       <div class="left_column">
-        <a class="navbar-brand" href="#">AMR LOGO</a>
+        <router-link to="/" class="navbar-brand">AMR LOGO</router-link>
         <a class="nav-item" style="color: white" href="#">
           <i class="fas fa-plus fa-lg"></i>
         </a>
