@@ -3,14 +3,42 @@
     <nav class="navbar navbar-expand-md navbar-dark header-blue" style="color: white">
       <div class="left_column">
         <router-link to="/" class="navbar-brand">AMR LOGO</router-link>
-        <a class="nav-item" style="color: white" href="#">
-          <i class="fas fa-plus fa-lg"></i>
-        </a>
-        <a class="nav-item col px-md-3">
-          <i class="fas fa-dollar-sign fa-lg"></i>
-        </a>
+        <ul class="navbar-nav menu-tab-left float-right left_icons">
+          <li @mouseover="addtab = true" @mouseleave="addtab = false" class="nav-item">
+            <a class="nav-link" style="color: white" href="#">
+              <i class="fas fa-plus fa-lg"></i>
+            </a>
+            <transition name="fade">
+              <ul class="card" v-if="addtab" @click="addtab = false">
+                <li>
+                  <a href="#">Add New</a>
+                </li>
+                <li>
+                  <a href="#">Research</a>
+                </li>
+                <li>
+                  <a href="#">Project</a>
+                </li>
+                <li>
+                  <a href="#">Course</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Jobs</a>
+                </li>
+              </ul>
+            </transition>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: white" href="#">
+              <i class="fas fa-dollar-sign fa-lg"></i>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="middle_column">
+      <div class="middle_column mx-auto">
         <form class="form-inline d-flex dropdown mx-auto">
           <input
             class="form-control form-control-sm col-sm-4"
@@ -25,7 +53,7 @@
         </form>
       </div>
       <div class="right_column">
-        <ul class="navbar-nav menu-tab float-right">
+        <ul class="navbar-nav menu-tab-right float-right">
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="fas fa-book-open fa-lg"></i>
@@ -84,7 +112,8 @@
 export default {
   data() {
     return {
-      profiletab: false
+      profiletab: false,
+      addtab: false
     };
   }
 };
@@ -102,22 +131,22 @@ export default {
   min-height: 4px !important;
 }
 
-.menu-tab {  
+.menu-tab-right {  
   font: 14px/1.5;
 }
 
-.menu-tab a {
+.menu-tab-right a {
   color: rgb(12, 11, 11);
   text-decoration: none;
 }
 
-.menu-tab li {
+.menu-tab-left li {
   display:block;
   float: left;
   position: relative;
 }
 
-.menu-tab li ul {
+.menu-tab-right li ul {
   position: absolute;
   right: 0px;
   top: 48px;
@@ -125,14 +154,14 @@ export default {
   padding: 0;
 }
 
-.menu-tab li ul li {
+.menu-tab-right li ul li {
   background: rgb(255, 255, 255);
   min-width: 100px;
   text-align: right;
   transition: background .2s;
 }
 
-.menu-tab li ul hr{
+.menu-tab-right li ul hr{
     right: 0px;
     top: 0px;
     bottom: 0px;
@@ -140,7 +169,7 @@ export default {
     padding: 0px;
 }
 
-.menu-tab li ul li:hover {
+.menu-tab-right li ul li:hover {
   background: rgb(117, 117, 117);
 }
 
@@ -150,4 +179,43 @@ export default {
 .fade-enter, .fade-leave-active {
   opacity: 0;
 }
+
+.left_icons{
+  padding-right: 20px;
+}
+
+.menu-tab-left {  
+  font: 14px/1.5;
+}
+
+.menu-tab-left a {
+  color: rgb(12, 11, 11);
+  text-decoration: none;
+}
+
+.menu-tab-left li {
+  display:block;
+  float: right;
+  position: relative;
+}
+
+.menu-tab-left li ul {
+  position: absolute;
+  left: 0px;
+  top: 48px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-tab-left li ul li {
+  background: rgb(255, 255, 255);
+  min-width: 100px;
+  text-align: left;
+  transition: background .2s;
+}
+
+.menu-tab-left li ul li:hover {
+  background: rgb(117, 117, 117);
+}
+
 </style>
