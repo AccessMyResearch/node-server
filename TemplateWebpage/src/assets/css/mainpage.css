@@ -20,6 +20,8 @@
 
 .left_column {
     width: 20%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .middle_column {

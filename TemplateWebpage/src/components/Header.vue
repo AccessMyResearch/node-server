@@ -1,42 +1,25 @@
 <template>
-  <div>
-    <nav class="navbar navbar-expand-md navbar-dark header-blue" style="color: white">
+  <div id="header" class="navbar navbar-expand-md navbar-dark header-blue">
       <div class="left_column">
-        <router-link to="/" class="navbar-brand">AMR LOGO</router-link>
-        <ul class="navbar-nav menu-tab-left float-right left_icons">
-          <li @mouseover="addtab = true" @mouseleave="addtab = false" class="nav-item">
-            <a class="nav-link" style="color: white" href="#">
-              <i class="fas fa-plus fa-lg"></i>
-            </a>
-            <transition name="fade">
-              <ul class="card" v-if="addtab" @click="addtab = false">
-                <li>
-                  <a href="#">Add New</a>
-                </li>
-                <li>
-                  <a href="#">Research</a>
-                </li>
-                <li>
-                  <a href="#">Project</a>
-                </li>
-                <li>
-                  <a href="#">Course</a>
-                </li>
-                <li>
-                  <a href="#">Blog</a>
-                </li>
-                <li>
-                  <a href="#">Jobs</a>
-                </li>
-              </ul>
-            </transition>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="#">
-              <i class="fas fa-dollar-sign fa-lg"></i>
-            </a>
-          </li>
-        </ul>
+        <router-link id="home-link" to="/" class="navbar-brand">AMR LOGO</router-link>
+          <nav class="left-icons">
+              <a @mouseover="addtab=true" @mouseleave="addtab=false" class="nav-item" href="#">
+                <i class="fas fa-plus fa-lg"></i>
+                <transition name="fade">
+                  <nav class="profile-tab" v-if="addtab" @click="addtab = false">
+                      <a href="#">Add New</a>
+                      <a href="#">Research</a>
+                      <a href="#">Project</a>
+                      <a href="#">Course</a>
+                      <a href="#">Blog</a>
+                      <a href="#">Jobs</a>
+                  </nav>
+                </transition>
+              </a>
+              <a class="nav-item">
+                <i class="fas fa-dollar-sign fa-lg"></i>
+              </a>
+          </nav>
       </div>
       <div class="middle_column mx-auto">
         <form class="form-inline d-flex dropdown mx-auto">
@@ -53,58 +36,35 @@
         </form>
       </div>
       <div class="right_column">
-        <ul class="navbar-nav menu-tab-right float-right">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+        <nav class="left-icons">
+            <a class="nav-item" href="#">
               <i class="fas fa-book-open fa-lg"></i>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-item" href="#">
               <i class="fas fa-user-friends fa-lg"></i>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-item" href="#">
               <i class="fas fa-envelope fa-lg"></i>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-item" href="#">
               <i class="fas fa-bell fa-lg"></i>
             </a>
-          </li>
-          <li @mouseover="profiletab = true" @mouseleave="profiletab = false" class="nav-item">
-            <a class="nav-link" href="#">
+            <a @mouseover="profileTabState=true" @mouseleave="profileTabState=false" class="nav-item" href="#">
               <i class="fas fa-user-circle fa-lg"></i>
-            </a>
-            <transition name="fade">
-              <ul class="card" v-if="profiletab" @click="profiletab = false">
-                <li>
+              <transition name="fade">
+                <nav class="profile-tab" v-if="profileTabState" @click="profileTabState=false">
                   <a href="#">Profile</a>
-                </li>
-                <li>
                   <a href="#">Help</a>
-                </li>
-                <li>
                   <a href="#">Settings</a>
-                </li>
-                <li>
                   <a href="#">Privacy</a>
-                </li>
-                <li>
                   <a href="#">About</a>
-                </li>
-                <hr/>
-                <li>
+                  <hr/>
                   <a href="#">Sign Out</a>
-                </li>
-              </ul>
-            </transition>
-            </li>
-        </ul>
+                </nav>
+              </transition>
+            </a>
+        </nav>
       </div>
-    </nav>
   </div>
 </template>
 
@@ -112,7 +72,7 @@
 export default {
   data() {
     return {
-      profiletab: false,
+      profileTabState: false,
       addtab: false
     };
   }
@@ -120,6 +80,74 @@ export default {
 </script>
 
 <style scoped>
+  @import "../assets/css/mainpage.css";
+
+#home-link {
+  margin: 0 10px;
+}
+
+#header {
+  height: 40px;
+  padding: 0;
+  z-index: 1;
+}
+
+.left-icons {
+  margin: auto 0;
+  float: right;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+
+.nav-item {
+  position: relative;
+  margin: auto 5px;
+  width: 24px;
+  align-content: center;
+  display: flex;
+  color: #dddddd;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: white;
+}
+
+.fas {
+  margin: auto
+}
+
+.profile-tab {
+  position: absolute;
+  right: 0;
+  top: 130%;
+  background-color: white;
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.profile-tab a {
+  text-decoration: none;
+  text-align: right;
+  min-width: 100px;
+  background-color: white;
+  padding-right: 5px;
+}
+
+.profile-tab a:hover {
+  background-color: #aaaaaa;
+}
+
+.profile-tab hr {
+  border-top: 1px solid rgba(0,0,0,.6);
+  margin: 0;
+}
+
 .header-blue {
   background-color: #487bbf;
 }
@@ -135,12 +163,7 @@ export default {
   font: 14px/1.5;
 }
 
-.menu-tab-right a {
-  color: rgb(12, 11, 11);
-  text-decoration: none;
-}
-
-.menu-tab-left li {
+.menu-tab li {
   display:block;
   float: left;
   position: relative;
@@ -156,8 +179,6 @@ export default {
 
 .menu-tab-right li ul li {
   background: rgb(255, 255, 255);
-  min-width: 100px;
-  text-align: right;
   transition: background .2s;
 }
 
@@ -165,7 +186,6 @@ export default {
     right: 0px;
     top: 0px;
     bottom: 0px;
-    margin: 0px;
     padding: 0px;
 }
 
