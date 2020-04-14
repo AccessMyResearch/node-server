@@ -1,7 +1,7 @@
 <template>
   <div class="Profilesidenav left_column">
       <div class="profileplacement">
-        <img src="assets/images/blackprofile.png" alt="Profile Picture" height="250" width="250">
+        <img src="../assets/images/blackprofile.png" alt="Profile Picture" height="250" width="250">
       </div>
       <div class="card">
           <button type="button" class="collapsible">Statistics</button>

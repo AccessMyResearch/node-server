@@ -1,6 +1,5 @@
 <template>
     <div>
-      <button @click="fetchData">Funny Button</button>
         <app-article v-for="article in responseData.publications" :article="article"></app-article>
     </div>
 </template>
@@ -14,13 +13,15 @@ export default {
             responseData: ''
         }
     },
+    mounted: function() {
+        this.fetchData();
+    },
     methods: {
         fetchData() {
             const t = this;
             this.$http.get('api/getPublications').then(response => { //insert next part of URL here if needed in the get()
                 return response.json();
             }).then(data => {
-                console.log(data)
                 t.responseData = data;
             });
         }

@@ -3,11 +3,11 @@
       <div class="left_column">
         <router-link id="home-link" to="/" class="navbar-brand">AMR LOGO</router-link>
           <nav class="left-icons">
-              <a @mouseover="addtab=true" @mouseleave="addtab=false" class="nav-item" href="#">
+              <a @mouseover="addTab=true" @mouseleave="addTab=false" class="nav-item" href="#">
                 <i class="fas fa-plus fa-lg"></i>
                 <transition name="fade">
-                  <nav class="profile-tab" v-if="addtab" @click="addtab = false">
-                      <a href="#">Add New</a>
+                  <nav class="profile-tab" v-if="addTab" @click="addTab = false">
+                      <router-link id="upload-link" to="/upload">Add New</router-link>
                       <a href="#">Research</a>
                       <a href="#">Project</a>
                       <a href="#">Course</a>
@@ -21,8 +21,8 @@
               </a>
           </nav>
       </div>
-      <div class="middle_column mx-auto">
-        <form class="form-inline d-flex dropdown mx-auto">
+      <div class="middle_column">
+        <form class="form-inline dropdown search-bar">
           <input
             class="form-control form-control-sm col-sm-4"
             type="text"
@@ -53,7 +53,7 @@
               <i class="fas fa-user-circle fa-lg"></i>
               <transition name="fade">
                 <nav class="profile-tab" v-if="profileTabState" @click="profileTabState=false">
-                  <a href="#">Profile</a>
+                  <router-link id="profile-link" to="/profile">Profile</router-link>
                   <a href="#">Help</a>
                   <a href="#">Settings</a>
                   <a href="#">Privacy</a>
@@ -73,7 +73,7 @@ export default {
   data() {
     return {
       profileTabState: false,
-      addtab: false
+      addTab: false
     };
   }
 };
@@ -90,6 +90,10 @@ export default {
   height: 40px;
   padding: 0;
   z-index: 1;
+}
+
+.search-bar {
+  margin: auto;
 }
 
 .left-icons {
@@ -126,7 +130,6 @@ export default {
   box-shadow: 2px 2px 2px 1px rgba(0,0,0,.1);
   display: flex;
   flex-direction: column;
-  z-index: 1;
   border-radius: 5px;
   overflow: hidden;
 }
