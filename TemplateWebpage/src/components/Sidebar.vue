@@ -16,30 +16,11 @@
     <button type="button" v-on:click="openFunction" class="collapsible">Year</button>
     <div class="content">
       <ul class="filteredOptions" style="clear:both">
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
+        <li><a href="#">Insert A Double Slider Here Or below</a></li>
       </ul>
     </div>
     
     <button type="button" v-on:click="openFunction" class="collapsible">Area</button>
-    <div class="content">
-      <ul class="filteredOptions" style="clear:both">
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-      </ul>
-    </div>
-
-    <button type="button" v-on:click="openFunction" class="collapsible">Database</button>
     <div class="content">
       <ul class="filteredOptions" style="clear:both">
         <li><a href="#">Put some stuff here</a></li>

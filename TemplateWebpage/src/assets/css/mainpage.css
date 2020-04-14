@@ -39,7 +39,7 @@ li {
 }
 
 #container {
-    display: table;
+    display: block;
     margin: 0 auto;
 }
 
@@ -63,3 +63,4 @@ li {
     height: auto;
     text-align: center;
 }
+
