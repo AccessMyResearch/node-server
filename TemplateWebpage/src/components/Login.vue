@@ -32,7 +32,7 @@
                             <button type="button" class="btn button-size btn-primary btn-lg btn-block">Linkedin</button>
                         </div>
                         <div class="placeholder">
-                            <button type="button" class="btn button-size btn-primary btn-lg btn-block">Research Gate</button>
+                            <button type="button" class="btn button-size btn-primary btn-lg btn-block">ResearchGate</button>
                         </div>
                         </div>
                     </div>

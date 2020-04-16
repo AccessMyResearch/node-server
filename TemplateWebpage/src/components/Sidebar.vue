@@ -1,6 +1,6 @@
 <template>
-  <div class="sidenav left_column">
-    <button type="button" v-on:click="openFunction" class="collapsible">Trending</button>
+  <div class="left_column">
+    <button type="button" v-on:click="openFunction" class="collapsible sidenav">Trending</button>
     <div class="content">
       <ul class="filteredOptions" style="clear:both">
         <li><a href="#">Put some stuff here</a></li>
@@ -13,14 +13,14 @@
       </ul>
     </div>
     
-    <button type="button" v-on:click="openFunction" class="collapsible">Year</button>
+    <button type="button" v-on:click="openFunction" class="collapsible sidenav">Year</button>
     <div class="content">
       <ul class="filteredOptions" style="clear:both">
         <li><a href="#">Insert A Double Slider Here Or below</a></li>
       </ul>
     </div>
     
-    <button type="button" v-on:click="openFunction" class="collapsible">Area</button>
+    <button type="button" v-on:click="openFunction" class="collapsible sidenav">Area</button>
     <div class="content">
       <ul class="filteredOptions" style="clear:both">
         <li><a href="#">Put some stuff here</a></li>
@@ -33,7 +33,7 @@
       </ul>
     </div>
 
-    <button type="button" v-on:click="openFunction" class="collapsible">Reading List</button>
+    <button type="button" v-on:click="openFunction" class="collapsible sidenav">Reading List</button>
     <div class="content">
       <ul class="filteredOptions" style="clear:both">
         <li><a href="#">Put some stuff here</a></li>
@@ -76,7 +76,7 @@
 <style scoped>
 
 .sidenav{
-  padding-right: 20px;
+  background-color: #dddddd;
 }
 
 .collapsible {
@@ -86,6 +86,7 @@
   text-align: left;
   outline: none;
   font-size: 15px;
+  font-weight: 500;
 }
 
 .active, .collapsible:hover {

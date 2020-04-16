@@ -2,32 +2,32 @@
   <div id="header" class="navbar navbar-expand-md navbar-dark header-blue">
       <div class="left_column">
         <router-link id="home-link" to="/" class="navbar-brand">AMR LOGO</router-link>
-          <nav class="left-icons">
-              <a @mouseover="addTab=true" @mouseleave="addTab=false" class="nav-item" href="#">
-                <i class="fas fa-plus fa-lg"></i>
-                <transition name="fade">
-                  <nav class="profile-tab" v-if="addTab" @click="addTab = false">
-                      <router-link id="upload-link" to="/upload">Add New</router-link>
-                      <a href="#">Research</a>
-                      <a href="#">Project</a>
-                      <a href="#">Course</a>
-                      <a href="#">Blog</a>
-                      <a href="#">Jobs</a>
-                  </nav>
-                </transition>
-              </a>
-              <a class="nav-item">
-                <i class="fas fa-dollar-sign fa-lg"></i>
-              </a>
-          </nav>
+        <nav class="left-icons">
+          <a @mouseover="addTab=true" @mouseleave="addTab=false" class="nav-item" href="#">
+            <i class="fas fa-plus fa-lg"></i>
+            <transition name="fade">
+              <nav class="profile-tab" v-if="addTab" @click="addTab = false">
+                  <router-link id="upload-link" to="/upload">Add New</router-link>
+                  <a href="#">Research</a>
+                  <a href="#">Project</a>
+                  <a href="#">Course</a>
+                  <a href="#">Blog</a>
+                  <a href="#">Jobs</a>
+              </nav>
+            </transition>
+          </a>
+          <a class="nav-item">
+            <i class="fas fa-dollar-sign fa-lg"></i>
+          </a>
+        </nav>
       </div>
       <div class="middle_column">
         <form class="form-inline dropdown search-bar">
           <input
-            class="form-control form-control-sm col-sm-4"
+            id="search-input"
+            class="form-control form-control-sm"
             type="text"
             placeholder="Search by keyword or author"
-            id="menu1"
             data-toggle="dropdown"
           />
           <button class="btn btn-dark btn-sm" type="submit">
@@ -90,10 +90,18 @@ export default {
   height: 40px;
   padding: 0;
   z-index: 1;
+  flex: 0 0 40px;
+  display: flex;
 }
 
 .search-bar {
+  height: 100%;
+  width: fit-content;
   margin: auto;
+}
+
+#search-input {
+  width: 300px;
 }
 
 .left-icons {

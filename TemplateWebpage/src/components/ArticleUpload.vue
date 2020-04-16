@@ -3,7 +3,7 @@
         <div class="row main_heading text-black">
             <ul class="page_title">
                 <li><i class="fas fa-file-upload fa-2x"></i></li>
-                <li><h2>Upload a publication </h2></li>
+                <li><h2>Upload</h2></li>
             </ul>
         </div>
         <div class="min-vh-100 main_body center">
@@ -11,12 +11,12 @@
                 <div class="col-lg mx-auto form p-4">
                    <form>
                        <div class="form-group">
-                           <label class="h2" for="title_of_publication">Title of Publication</label>
-                           <input type="text" class="form-control" placeholder="Title of Publication">
+                           <label class="h2" for="title_of_publication">Title</label>
+                           <input type="text" class="form-control" placeholder="Title">
                        </div>
                        <div class="form-group">
-                           <label class="h2" for="Authors">Author(s) of Publication</label>
-                           <input type="text" class="form-control" placeholder="Author(s) of Publication">
+                           <label class="h2" for="Authors">Author(s)</label>
+                           <input type="text" class="form-control" placeholder="Author(s)">
                        </div>
                         <div class="form-group">
                            <label class="h2" for="Abstract">Abstract</label>

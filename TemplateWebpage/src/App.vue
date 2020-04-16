@@ -5,7 +5,7 @@
     </div>
 </template>
 
-<style scoped>
+<style>
      @import "assets/css/mainpage.css";
 </style>
 

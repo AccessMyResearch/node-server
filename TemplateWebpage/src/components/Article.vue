@@ -44,6 +44,8 @@ export default {
   padding: 2px 5px;
   margin-top: 5px;
   display: flex;
+  background-color: #dddddd;
+  color: #333333;
 }
 
 .article-card-left {
@@ -54,5 +56,8 @@ export default {
   width: 10%;
 }
 
+p, h5 {
+  margin-bottom: 0;
+}
 
 </style>
