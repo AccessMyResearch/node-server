@@ -34,7 +34,12 @@ export default {
 
 <style scoped>
     .article-feed {
-        margin: 0 5px;
+        padding-left: 5px;
+        padding-right: 5px;
         flex-flow: column;
+        overflow-y: scroll;
+    }
+    .article-feed::-webkit-scrollbar {
+        display: none;
     }
 </style>
