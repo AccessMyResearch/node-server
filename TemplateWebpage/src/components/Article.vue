@@ -16,14 +16,23 @@
         </div>
       </div>
       <div class="col-sm-1 my-auto article-card-right">
-        <i class="fas fa-chevron-down float-center"></i>
+        <i v-if="!showArticle" class="fas fa-chevron-down"></i>
+        <i v-else class="fas fa-chevron-up"></i>
       </div>
     </div>
     <div class="panel-body article-card-body" v-if="showArticle">
       <div class="article-card-left">
         <p>Abstract: {{article.summary}}</p>
       </div>
-      <div class="article-card-right"></div>
+      <div class="article-card-right">
+        <div class="expanded-card-icons">
+          <i class="fas fa-eye"></i>
+          <i class="fas fa-download"></i>
+          <i class="fas fa-link"></i>
+          <i class="fas fa-envelope"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -40,20 +49,31 @@ export default {
 </script>
 
 <style scoped>
+.expanded-card-icons {
+  margin: auto;
+}
+
+
 .article-card {
   padding: 2px 5px;
   margin-top: 5px;
-  display: flex;
   background-color: #dddddd;
   color: #333333;
 }
 
+.article-card-head {
+  text-align: center;
+}
+
 .article-card-left {
   width: 90%;
+  text-align: justify;
 }
 
 .article-card-right {
   width: 10%;
+  display: flex;
+  flex-flow: column;
 }
 
 p, h5 {
