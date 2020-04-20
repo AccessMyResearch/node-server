@@ -81,21 +81,17 @@ export default {
 
 <style scoped>
   @import "../assets/css/mainpage.css";
-
 #home-link {
   margin: 0 10px;
 }
-
 #header {
   height: 40px;
   padding: 0;
   z-index: 1;
 }
-
 .search-bar {
   margin: auto;
 }
-
 .left-icons {
   margin: auto 0;
   float: right;
@@ -103,7 +99,6 @@ export default {
   height: 100%;
   flex-direction: row;
 }
-
 .nav-item {
   position: relative;
   margin: auto 5px;
@@ -113,15 +108,12 @@ export default {
   color: #dddddd;
   text-decoration: none;
 }
-
 .nav-item:hover {
   color: white;
 }
-
 .fas {
   margin: auto
 }
-
 .profile-tab {
   position: absolute;
   right: 0;
@@ -133,7 +125,6 @@ export default {
   border-radius: 5px;
   overflow: hidden;
 }
-
 .profile-tab a {
   text-decoration: none;
   text-align: right;
@@ -141,16 +132,13 @@ export default {
   background-color: white;
   padding-right: 5px;
 }
-
 .profile-tab a:hover {
   background-color: #aaaaaa;
 }
-
 .profile-tab hr {
   border-top: 1px solid rgba(0,0,0,.6);
   margin: 0;
 }
-
 .header-blue {
   background-color: #487bbf;
 }
@@ -161,17 +149,14 @@ export default {
 .navbar {
   min-height: 4px !important;
 }
-
 .menu-tab-right {  
   font: 14px/1.5;
 }
-
 .menu-tab li {
   display:block;
   float: left;
   position: relative;
 }
-
 .menu-tab-right li ul {
   position: absolute;
   right: 0px;
@@ -179,49 +164,40 @@ export default {
   margin: 0;
   padding: 0;
 }
-
 .menu-tab-right li ul li {
   background: rgb(255, 255, 255);
   transition: background .2s;
 }
-
 .menu-tab-right li ul hr{
     right: 0px;
     top: 0px;
     bottom: 0px;
     padding: 0px;
 }
-
 .menu-tab-right li ul li:hover {
   background: rgb(117, 117, 117);
 }
-
 .fade-enter-active, .fade-leave-active {
   transition: opacity .2s;
 }
 .fade-enter, .fade-leave-active {
   opacity: 0;
 }
-
 .left_icons{
   padding-right: 20px;
 }
-
 .menu-tab-left {  
   font: 14px/1.5;
 }
-
 .menu-tab-left a {
   color: rgb(12, 11, 11);
   text-decoration: none;
 }
-
 .menu-tab-left li {
   display:block;
   float: right;
   position: relative;
 }
-
 .menu-tab-left li ul {
   position: absolute;
   left: 0px;
@@ -229,16 +205,13 @@ export default {
   margin: 0;
   padding: 0;
 }
-
 .menu-tab-left li ul li {
   background: rgb(255, 255, 255);
   min-width: 100px;
   text-align: left;
   transition: background .2s;
 }
-
 .menu-tab-left li ul li:hover {
   background: rgb(117, 117, 117);
 }
-
 </style>
