@@ -1,3 +1,17 @@
+:root {
+    --bg-color: #333;
+    --header-color: #47b;
+    --button-color: #bbb;
+    --button-hover: white;
+    --modal-background: white;
+    --card-background: #ddd;
+    --card-text: #333;
+
+    --header-height: 40px;
+
+    --article-card-padding: 40px
+}
+
 .background {
     display: block;
     margin-left: auto;
@@ -12,25 +26,41 @@
     top: 10px;
 }
 
+body, html, #app {
+    height: 100%;
+    min-height: 100%;
+    background-color: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-flow: column;
+}
+
 .body {
     display: flex;
     height: 100%;
     width: 100%;
+    padding-top: var(--header-height);
+    background-color: var(--bg-color);
 }
 
 .left_column {
-    width: 20%;
     height: 100%;
-    overflow: hidden;
+    flex: 0 0 200px;
 }
 
 .middle_column {
-    width: 60%;
+    height: 100%;
+    flex: 1 1 auto;
+    display: flex;
 }
 
 .right_column {
-    width: 20%;
+    height: 100%;
     float: right;
+    flex: 0 0 200px;
 }
 
 li {

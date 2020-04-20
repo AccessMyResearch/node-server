@@ -1,9 +1,8 @@
 <template>
     <div class="body">
         <app-sidebar></app-sidebar>
-        <div class="middle_column">
-            <app-main-feed></app-main-feed>
-        </div>
+        <app-main-feed></app-main-feed>
+        <div class="right_column"></div>
     </div>
 </template>
 

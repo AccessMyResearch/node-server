@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="middle_column article-feed">
         <app-article v-for="article in responseData.publications" :article="article"></app-article>
     </div>
 </template>
@@ -33,5 +33,13 @@ export default {
 </script>
 
 <style scoped>
-    
+    .article-feed {
+        padding-left: 5px;
+        padding-right: 5px;
+        flex-flow: column;
+        overflow-y: scroll;
+    }
+    .article-feed::-webkit-scrollbar {
+        display: none;
+    }
 </style>
