@@ -1,46 +1,60 @@
 <template>
-    <div>
-        <div class="min-vh-100 center">
-            <div class="row text-black">
-                <div class="col-lg-6 col-md-8 mx-auto text-center form p-4">
-                    <h1 class="display-2 p-1">AMR</h1>
-                    <h4 class="p-2">"Removing the barrier between academics and the public"</h4>
-                    <div class="p-2">
-                        <form class="justify-content-center">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Password">
-                            </div>
-                            <button type="submit" class="btn btn-secondary btn-lg btn-block">Log in</button>
-                        </form>
+  <div>
+    <div class="min-vh-100 center">
+      <div class="row text-black">
+        <div class="login_card col-lg-6 col-md-8 mx-auto text-center form p-4">
+          <h1 class="display-2 p-1">AMR</h1>
+          <h4 class="p-2">Removing the barrier between academics and the public</h4>
+          <div class="p-2">
+            <form class="justify-content-center">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Password">
+                  <div class="bottom">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="forgotpassword">
+                      <label class="form-check-label" for="forgotpassword">
+                        Keep me signed in
+                      </label>
                     </div>
-                    <div class="icons">
-                    <h6 class="horizontal-line">or</h6>
-                    <div class="log-in-buttons">
-                        <div class="set-one">
-                        <div class="placeholder">
-                            <button type="button" class="btn button-size btn-success btn-lg btn-block">Google</button>
-                        </div>
-                        <div class="placeholder">
-                            <button type="button" class="btn button-size btn-primary btn-lg btn-block">Facebook</button>
-                        </div>
-                        </div>
-                        <div class="set-two">
-                        <div class="placeholder">
-                            <button type="button" class="btn button-size btn-primary btn-lg btn-block">Linkedin</button>
-                        </div>
-                        <div class="placeholder">
-                            <button type="button" class="btn button-size btn-primary btn-lg btn-block">ResearchGate</button>
-                        </div>
-                        </div>
+                    <div class="float-right forgot_password">
+                      <p><a href="#">Forgot your password?</a></p>
                     </div>
-                    </div>
+                  </div>
                 </div>
+              <button type="submit" class="login d-inline-block float-center btn button-size btn-secondary btn-lg btn-block">Log in</button>
+            </form>
+            <div class="sign_up">
+              <button type="submit" class="d-inline-block float-center btn button-size btn-secondary btn-lg btn-block">Sign up</button>
             </div>
+          </div>
+          <div class="icons">
+            <h6 class="horizontal-line">or</h6>
+              <div class="log-in-buttons">
+                <div class="set-one">
+                  <div class="placeholder">
+                    <button type="button" class="btn button-size btn-success btn-lg btn-block"><i class="logos float-left fab fa-google"></i>Google</button>
+                  </div>
+                  <div class="placeholder">
+                    <button type="button" class="btn button-size btn-primary btn-lg btn-block"><i class="logos float-left fab fa-facebook-square"></i>Facebook</button>
+                  </div>
+                </div>
+                <div class="set-two">
+                  <div class="placeholder">
+                    <button type="button" class="btn button-size btn-primary btn-lg btn-block"><i class="logos float-left fab fa-linkedin"></i>Linkedin</button>
+                  </div>
+                  <div class="placeholder">
+                    <button type="button" class="btn button-size btn-primary btn-lg btn-block"><i class="logos float-left fab fa-researchgate"></i>Research Gate</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>  
+    </div>
+  </div>  
 </template>
 
 <script>
@@ -48,6 +62,9 @@
 </script>
 
 <style scoped>
+.login_card{
+  background-color: var(--card-background);
+}
 
 .button-size{
   width: 200px;
@@ -59,6 +76,43 @@
 
 .placeholder{
   display: inline-block;
+}
+
+.bottom{
+  display: flex;
+}
+
+.bottom div:last-child{
+  margin-left: auto;
+}
+
+.forgot_password{
+  float: right;
+}
+
+.sign_up{
+  padding-top: 5px;
+}
+
+.sign_up button{
+  background-color: #FF8000;
+}
+
+.sign_up button:hover{
+  background-color: rgb(250, 102, 16);
+}
+
+.login{
+  background-color: #487bbf;
+}
+
+.login:hover{
+  background-color: #4482d3;
+}
+
+.logos {
+  -ms-transform: translateY(-100%);
+  transform: translateY(25%);
 }
 
 form:before {
@@ -101,3 +155,10 @@ form:before {
   margin-right: -50%;
 }
 </style>
+
+
+
+
+
+
+
