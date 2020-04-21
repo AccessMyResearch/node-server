@@ -1,27 +1,22 @@
 <template>
   <div class="left_column">
-    <button type="button" v-on:click="openFunction" class="collapsible sidenav">Trending</button>
-    <div class="content">
+    <button v-on:click="trendingFilterDisplay = !trendingFilterDisplay" class="collapsible sidenav">Trending</button>
+    <div class="content" v-if="trendingFilterDisplay">
       <ul class="filteredOptions" style="clear:both">
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
-        <li><a href="#">Put some stuff here</a></li>
+        <li>Put some stuff here</li>
+        <li>Put some stuff here</li>
       </ul>
     </div>
     
-    <button type="button" v-on:click="openFunction" class="collapsible sidenav">Year</button>
-    <div class="content">
+    <button type="button" v-on:click="yearFilterDisplay = !yearFilterDisplay" class="collapsible sidenav">Year</button>
+    <div class="content" v-if="yearFilterDisplay">
       <ul class="filteredOptions" style="clear:both">
         <li><a href="#">Insert A Double Slider Here Or below</a></li>
       </ul>
     </div>
     
-    <button type="button" v-on:click="openFunction" class="collapsible sidenav">Area</button>
-    <div class="content">
+    <button type="button" v-on:click="areaFilterDisplay = !areaFilterDisplay" class="collapsible sidenav">Area</button>
+    <div class="content" v-if="areaFilterDisplay">
       <ul class="filteredOptions" style="clear:both">
         <li><a href="#">Put some stuff here</a></li>
         <li><a href="#">Put some stuff here</a></li>
@@ -33,8 +28,8 @@
       </ul>
     </div>
 
-    <button type="button" v-on:click="openFunction" class="collapsible sidenav">Reading List</button>
-    <div class="content">
+    <button type="button" v-on:click="readingListFilterDisplay = !readingListFilterDisplay" class="collapsible sidenav">Reading List</button>
+    <div class="content" v-if="readingListFilterDisplay">
       <ul class="filteredOptions" style="clear:both">
         <li><a href="#">Put some stuff here</a></li>
         <li><a href="#">Put some stuff here</a></li>
@@ -45,38 +40,29 @@
         <li><a href="#">Put some stuff here</a></li>
       </ul>
     </div>
-
   </div>
 </template>
 
 <script>
   export default {
-    methods: {
-      openFunction : function(arg){
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
+    data() {
+      return {
+        trendingFilterDisplay: false,
+        yearFilterDisplay: false,
+        areaFilterDisplay: false,
+        readingListFilterDisplay: false
+        };
     }
-  }
-  }
+  };
 </script>
 
 
 <style scoped>
+  @import '../assets/css/mainpage.css';
+
 
 .sidenav{
-  background-color: #dddddd;
+  background-color: var(--card-background);
 }
 
 .collapsible {
@@ -93,14 +79,9 @@
   background-color: rgb(175, 175, 175);
 }
 
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-}
-
 .filteredOptions{
   font-size: 15px;
+  padding-left: 35px;
 }
 
 .filteredOptions li{
