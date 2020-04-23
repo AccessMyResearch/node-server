@@ -1,7 +1,7 @@
 <template>
     <div id="header">
         <div class="left_column">
-            <router-link id="home-link" to="/" class="navbar-brand">AMR LOGO</router-link>
+            <router-link id="home-link" to="/"><img class="left_column" src="../assets/images/AMRLogo.png"></router-link>
             <nav class="nav-bar">
                 <a @mouseover="addTab=true" @mouseleave="addTab=false" class="nav-item" href="#">
                     <i class="fas fa-plus fa-lg"></i>
@@ -103,7 +103,7 @@
     }
 
     #search-input {
-        width: 300px;
+        width: 500px;
     }
 
     .nav-bar {
