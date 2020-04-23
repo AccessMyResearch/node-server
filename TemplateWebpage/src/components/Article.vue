@@ -44,12 +44,14 @@
 </template>
 
 <script>
+    import {mapActions} from 'vuex';
+
     export default {
         props: ["article"],
         data() {
             return {
                 showArticle: false
-            };
+            }
         }
     };
 </script>
