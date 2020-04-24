@@ -35,18 +35,18 @@
             <div class="logo_button_sets">
               <div class="set-one">
                 <div class="logo_button">
-                  <button type="button" class="google_button btn button-size btn-success btn-lg btn-block"><i class="logos float-left fab fa-google"></i>Google</button>
+                  <button type="button" class="orcid_button btn button-size btn-primary btn-lg btn-block"><i class="logos float-left fab fa-orcid"></i>ORCID</button>
                 </div>
                 <div class="logo_button">
-                  <button type="button" class="facebook_button btn button-size btn-primary btn-lg btn-block"><i class="logos float-left fab fa-facebook-square"></i>Facebook</button>
+                  <button type="button" class="linkedin_button btn button-size btn-primary btn-lg btn-block"><i class="logos float-left fab fa-linkedin"></i>Linkedin</button>
                 </div>
               </div>
               <div class="set-two">
                 <div class="logo_button">
-                  <button type="button" class="linkedin_button btn button-size btn-primary btn-lg btn-block"><i class="logos float-left fab fa-linkedin"></i>Linkedin</button>
+                  <button type="button" class="facebook_button btn button-size btn-primary btn-lg btn-block"><i class="logos float-left fab fa-facebook-square"></i>Facebook</button>
                 </div>
                 <div class="logo_button">
-                  <button type="button" class="orcid_button btn button-size btn-primary btn-lg btn-block"><i class="logos float-left fab fa-orcid"></i>ORCID</button>
+                  <button type="button" class="google_button btn button-size btn-success btn-lg btn-block"><i class="logos float-left fab fa-google"></i>Google</button>
                 </div>
               </div>
             </div>
@@ -196,10 +196,3 @@ form:before {
   margin-right: -50%;
 }
 </style>
-
-
-
-
-
-
-
