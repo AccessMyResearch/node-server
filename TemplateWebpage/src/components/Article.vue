@@ -35,6 +35,7 @@
                         <i class="fas fa-link"></i>
                         <i class="fas fa-envelope"></i>
                         <i class="fas fa-star"></i>
+                        <i class="fas fa-expand-alt"></i>
                     </div>
                 </div>
             </div>
@@ -43,12 +44,14 @@
 </template>
 
 <script>
+    import {mapActions} from 'vuex';
+
     export default {
         props: ["article"],
         data() {
             return {
                 showArticle: false
-            };
+            }
         }
     };
 </script>
@@ -56,7 +59,7 @@
 <style scoped>
     .article-card {
         width: 100%;
-        max-width: 800px;
+        max-width: 900px;
         padding: 5px;
         margin: 5px auto 0;
         display: flex;
