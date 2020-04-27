@@ -1,5 +1,5 @@
 <template>
-    <div class="article-card" @click="showArticle = !showArticle">
+    <div class="article-card">
         <div class="article-card-head">
             <div class="article-card-middle">
                 <h5 class="article-title">
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="article-card-right">
-                <div class="arrow-container">
+                <div class="arrow-container" @click="showArticle = !showArticle">
                     <i class="fas fa-chevron-down" v-if="!showArticle"></i>
                     <i class="fas fa-chevron-up" v-else></i>
                 </div>
@@ -44,8 +44,6 @@
 </template>
 
 <script>
-    import {mapActions} from 'vuex';
-
     export default {
         props: ["article"],
         data() {

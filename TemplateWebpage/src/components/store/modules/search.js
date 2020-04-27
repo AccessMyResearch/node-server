@@ -1,18 +1,19 @@
-import Vue from 'vue'
+import Vue from 'vue';
 
 const state = {
-    publications: []
+    keywords: []
 };
 
 const mutations = {
-    'SET_ARTICLES' (state, articles) {
-        state.publications = articles;
+    'SET_KEYWORDS' (state, keywords) {
+        state.keywords = keywords;
     }
 };
 
 const actions = {
-    initializeArticles: ({commit}) => {
-        Vue.http.post('api/getPublications', {}, {headers:
+    'searchKeywords': ({commit}) => {
+        Vue.http.post('api/getPublications', {'searchKeywords': state.keywords},
+            {headers:
         {
             'Content-Type': 'application/json'
         }}).then(response => {
@@ -24,14 +25,14 @@ const actions = {
 };
 
 const getters = {
-    publications: state => {
-        return state.publications;
+    keywords: state => {
+        return state.keywords;
     }
 };
 
 export default {
     state,
-    getters,
+    mutations,
     actions,
-    mutations
+    getters
 };

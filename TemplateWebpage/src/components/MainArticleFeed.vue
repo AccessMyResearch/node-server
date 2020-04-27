@@ -8,23 +8,9 @@
 import Article from './Article.vue';
 
 export default {
-    data() {
-        return {
-            responseData: ''
-        }
-    },
-    // mounted() {
-    //     this.fetchData();
-    // },
     created() {
-        console.log('created');
         this.$store.dispatch('initializeArticles');
     },
-    // mounted() {
-    //     this.responseData = this.$store.getters.publications;
-    //     console.log('mounted ');
-    //     console.log(this.$store.getters.publications);
-    // },
     computed: {
         articles() {
             return this.$store.getters.publications;

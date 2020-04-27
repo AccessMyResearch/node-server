@@ -39,8 +39,9 @@
                         type="text"
                         placeholder="Search by keyword or author"
                         data-toggle="dropdown"
+                        v-model="searchInput"
                 />
-                <button class="btn btn-dark btn-sm" type="submit">
+                <button class="btn btn-dark btn-sm" type="submit" @click.prevent="sendSearchRequest">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
@@ -128,8 +129,16 @@
                 messageTab: false,
                 notificationTab: false,
                 donateTab: false,
-                addTab: false
-            };
+                addTab: false,
+                searchInput: ''
+            }
+        },
+        methods: {
+            sendSearchRequest() {
+                var searchArr = this.searchInput.split(' ');
+                this.$store.commit('SET_KEYWORDS', searchArr);
+                this.$store.dispatch('searchKeywords');
+            }
         }
     };
 </script>
