@@ -1,52 +1,71 @@
 <template>
-  <div id="compenemt_drag-and-drop">      
-    <div class="left_section">
-      <button type="button" class="collapsible sidenav">Type</button>
-      <button type="button" class="collapsible sidenav">Access</button>
-      <button type="button" class="collapsible sidenav">Add To</button>
-    </div>
-    <div class="middle_section text-black">
-        <div class="row text-black">
-            <div class="card drag_and_drop mx-auto">
-                <div class=" h2 text-center card-header">
-                    Upload
-                </div>
-                <div class="card-body">
-                    <div class="drag_and_drop_area">
-                        <div v-if="!fileDropped">
-                            <div :class="['dropzone', fileDragged ? 'dropzone-over' : '']" @dragenter="fileDragged = true" @dragleave="fileDragged = false">
-                                <div class="inser_file_information" @drag="onChange">
-                                    <span class="dropzone-here">Drop file here</span>
-                                    <div class="file_type_warning">
-                                        <div>(PDF only)</div>
-                                    </div>
-                                </div>
-                                <input type="file" @change="onChange">
-                            </div>
-                        </div>
-                        <div v-else class="dropzone-uploaded">
-                            <div class="dropzone-uploaded-info">
-                                <span class="dropzone-title">File Chosen: {{ fileDropped.name }}</span>
-                                <button type="button" class="btn btn-primary remove_file_button" @click="removeFile">Remove File</button>
-                            </div>
-                        </div>
-                        <div v-if="!fileDropped" class="row submit_button">
-                          <button type="submit" class="float-right btn btn-primary" disabled>Submit</button>
-                        </div>
-                        <div v-else class="row submit_button">
-                          <button type="submit" class="float-right btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
+  <div>      
+    <div class="drag_and_drop row text-black card col-lg-6 col-md-8 mx-auto">
+      <div class="h2 text-center card-header">
+          Upload
+          <form>
+            <div class="form-group">
+              <select id="inputType" class="form-control">
+                <option selected>Type...</option>
+                <option>...</option>
+              </select>
             </div>
-        </div>     
-    </div>
-    <div class="right_section">
+          </form>
+          with
+          <form>
+            <div class="form-group">
+              <select id="inputAccess" class="form-control">
+                <option selected>Access...</option>
+                <option>Public</option>
+                <option>Requested</option>
+              </select>
+            </div>
+          </form>
+          to
+          <form>
+            <div class="form-group">
+              <select id="inputProject" class="form-control">
+                <option selected>Project...</option>
+                <option>Project One</option>
+                <option>Put Something Here i Guess</option>
+                <option>IDK</option>
+              </select>
+            </div>
+          </form>
+      </div>
+      <div class="card-body">
+        <div class="drag_and_drop_area">
+          <div v-if="!fileDropped">
+            <div :class="['dropzone', fileDragged ? 'dropzone-over' : '']" @dragenter="fileDragged = true" @dragleave="fileDragged = false">
+              <div class="inser_file_information" @drag="onChange">
+                <span class="dropzone-here">Drop file here</span>
+                <div class="file_type_warning">
+                  <div>(PDF only)</div>
+                </div>
+              </div>
+              <input type="file" @change="onChange">
+            </div>
+          </div>
+          <div v-else class="dropzone-uploaded">
+            <div class="dropzone-uploaded-info">
+              <span class="dropzone-title">File Chosen: {{ fileDropped.name }}</span>
+              <button type="button" class="btn btn-primary remove_file_button" @click="removeFile">Remove File</button>
+            </div>
+          </div>
+          <div v-if="!fileDropped" class="row submit_button">
+            <button type="submit" class="float-right btn btn-primary" disabled>Submit</button>
+          </div>
+          <div v-else class="row submit_button">
+            <button type="submit" class="float-right btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>  
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -89,31 +108,36 @@ export default {
 </script>
 
 <style scoped>
-  @import "../assets/css/mainpage.css";
 
-  #compenemt_drag-and-drop{
-    display: flex;
-    padding-top: 40px;
-  }
+.card-header{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  background-color: var(--card-background);
+}
 
-  /*Need to fix this, left_section, right_section, and middle_section*/
-  .left_section{
-    width: 10%;
-  }
+.title_bar{
+  display: flex;
+  justify-content: space-between;
+}
 
-  .middle_section{
-    width: 80%;
-  }
-
-  .right_section{
-    width: 10%
-  }
-
+.form_group{
+  padding-left: 20px;
+}
 
   .drag_and_drop{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
       width:70%;
-      background: #ddd;
+      background-color: var(--card-background);
+      border-radius: 15px;
   }
+
 
   .dropzone{
     width: 100%;
