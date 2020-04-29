@@ -56,7 +56,7 @@
                                 Reading List
                             </div>
                             <div class="icon_container_content">
-                                Put some stuff here idk
+                                Reading list folder one
                             </div>
                         </div>
                     </transition>
@@ -69,7 +69,7 @@
                                 Friends
                             </div>
                             <div class="icon_container_content">
-                                Put some stuff here idk
+                                Mehmet wants to be your friend
                             </div>
                         </div>
                     </transition>
@@ -82,7 +82,7 @@
                                 Messages
                             </div>
                             <div class="icon_container_content">
-                                Put some stuff here idk
+                                Mehmet Messaged you
                             </div>
                         </div>
                     </transition>
@@ -95,7 +95,7 @@
                                 Notifications
                             </div>
                             <div class="icon_container_content">
-                                Put some stuff here idk
+                                Mehmet Liked your publication
                             </div>
                         </div>
                     </transition>
@@ -255,9 +255,8 @@
         flex-direction: column;
         border-radius: 5px;
         overflow: hidden;
-        width: 400px;
-        height: 100vh;
-        max-height: 680px;
+        width: 300px;
+        height: 500px;
         background: var(--card-background);
     }
 

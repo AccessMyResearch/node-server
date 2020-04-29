@@ -4,7 +4,7 @@
             <div class="card general_overview_cards">
                 <div class="card-header" @click="showOverview = !showOverview">
                     Overview
-                    <i class="fas fa-edit float-right"></i>
+                    <i class="icon fas fa-edit float-right"></i>
                 </div>
                 <transition name="expand">
                 <div class="card-body" v-if="showOverview">
@@ -20,7 +20,7 @@
             <div class="card general_overview_cards">
                 <div class="card-header">
                     Experience
-                    <i class="fas fa-edit float-right"></i>
+                    <i class="icon fas fa-edit float-right"></i>
                 </div>
                 <div class="card-body">
                     <p>Had my Experience at School A for 10 Years</p>
@@ -35,7 +35,7 @@
             <div class="card general_overview_cards">
                 <div class="card-header">
                     Education
-                    <i class="fas fa-edit float-right"></i>
+                    <i class="icon fas fa-edit float-right"></i>
                 </div>
                 <div class="card-body">
                     <p>
@@ -77,7 +77,7 @@
             <div class="card general_overview_cards">
                 <div class="card-header">
                     License and Certification
-                    <i class="fas fa-edit float-right"></i>
+                    <i class="icon fas fa-edit float-right"></i>
                 </div>
                 <div class="card-body">
                     <p>
@@ -149,6 +149,10 @@
 
 .expand-enter, .expand-leave-to {
     max-height: 100px;
+}
+
+.icon:hover{
+    color: azure;
 }
 
 </style>

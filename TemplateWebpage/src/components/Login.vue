@@ -87,6 +87,13 @@
   display: inline-block;
 }
 
+.form-group{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
 .options_check{
   display: flex;
 }
