@@ -10,11 +10,11 @@ import { mapActions } from 'vuex'
 export default {
   name: 'Auth',
   methods: mapActions(['handleAuthentication']),
-  // mounted() {
-  //   this.handleAuthentication().then(() => {
-  //     this.$router.push({name: 'home'});
-  // });
-  // }
+  mounted() {
+    this.handleAuthentication().then(() => {
+      this.$router.push({name: 'home'});
+  });
+  }
 }
 </script>
 
