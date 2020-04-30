@@ -60,7 +60,8 @@
                             <a href="#">Privacy</a>
                             <a href="#">About</a>
                             <hr/>
-                            <a href="#">Sign Out</a>
+                            <a @click="login()" v-if="!authenticated">Login</a>
+                            <a @click="logout()" v-else>Log out</a>
                         </nav>
                     </transition>
                 </a>
@@ -70,6 +71,8 @@
 </template>
 
 <script>
+import {mapActions, mapGetters} from 'vuex'
+
     export default {
         data() {
             return {
@@ -80,11 +83,13 @@
         },
         methods: {
             sendSearchRequest() {
-                var searchArr = this.searchInput.split(' ');
+                var searchArr = this.searchInput.trim().split(' ');
                 this.$store.commit('SET_KEYWORDS', searchArr);
                 this.$store.dispatch('searchKeywords');
-            }
-        }
+            },
+            ...mapActions(['login', 'logout'])
+        },
+        computed: mapGetters(['authenticated'])
     };
 </script>
 

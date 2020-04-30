@@ -18,7 +18,8 @@ Vue.http.options.root = 'http://3.22.43.19:8080/'; //insert root URL here
 const router = new VueRouter({
   mode: 'history',
   routes
-});
+})
+export default router
 
 new Vue({
   el: '#app',
