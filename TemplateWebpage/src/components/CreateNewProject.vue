@@ -9,11 +9,18 @@
                            <label class="h2" for="title_of_project">Title</label>
                            <input type="text" class="form-control" placeholder="Title">
                        </div>
+                       <div class="form-group">
+                           <label class="h2" for="add_members">Members</label>
+                           <input type="text" class="form-control" placeholder="Memebers">
+                       </div>
                         <div class="form-group">
                            <label class="h2" for="description">Description</label>
                            <textarea type="text" class="form-control" placeholder="Description of project..." rows="5"></textarea>
                        </div>
                        <div class="form-group">
+                           <label for="chooseFileInput">Choose a file</label>
+                           <input type="file" class="form-control-file" aria-describedby="fileWarning">
+                           <small id="fileWarning" class="form-text text-muted">Put a file Warning here if you want one </small>
                            <button type="submit" class="float-right btn btn-primary">Create new project</button>
                        </div>
                    </form>

@@ -7,7 +7,11 @@
             <div class="form-group">
               <select id="inputType" class="form-control">
                 <option selected>Type...</option>
-                <option>...</option>
+                <option>Publication</option>
+                <option>Research</option>
+                <option>Preprint</option>
+                <option>Article</option>
+                <option>Poster</option>
               </select>
             </div>
           </form>
@@ -16,8 +20,8 @@
             <div class="form-group">
               <select id="inputAccess" class="form-control">
                 <option selected>Access...</option>
-                <option>Public</option>
-                <option>Requested</option>
+                <option>Public Access</option>
+                <option>Requested Access</option>
               </select>
             </div>
           </form>
