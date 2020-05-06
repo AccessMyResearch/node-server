@@ -6,7 +6,10 @@
       <button type="button" v-on:click="yearFilterDisplay = !yearFilterDisplay" class="collapsible sidenav">Year</button>
       <div class="content" v-if="yearFilterDisplay">
         <div class="filteredOptions">
-          <app-slider></app-slider>
+          <div class="input-group">
+            <input type="text" class="form-control" v-model="min" placeholder="Min"/>
+            <input type="text" class="form-control" v-model="max" placeholder="Max"/>
+          </div>
         </div>
       </div>
       
@@ -31,6 +34,8 @@
         </ul>
       </div>
 
+      <button type="button" @click="makeFilterRequest" class="collapsible sidenav">Apply Filter(s)</button>
+
       <div class="toggle_off float-right" v-if="sidebarDisplay" >
         <i @click="sidebarDisplay = !sidebarDisplay" class="fas fa-chevron-left"></i>
       </div>
@@ -43,12 +48,9 @@
 </template>
 
 <script>
-  import Slider from './YearDoubleSlider.vue';
+  import {mapActions, mapGetters} from 'vuex'
 
   export default {
-    components: {
-      appSlider: Slider
-    },
     data() {
       return {
         sidebarDisplay: true,
@@ -56,8 +58,21 @@
         yearFilterDisplay: false,
         areaFilterDisplay: false,
         typeFilterDisplay: false,
-        readingListFilterDisplay: false
+        readingListFilterDisplay: false,
+        min: 1500,
+        max: 2020
         };
+    },
+    methods: {
+      makeFilterRequest() {
+        var filterObj = {
+          author: null,
+          startYear: this.min,
+          endYear: this.max
+        }
+        this.$store.commit('SET_FILTERS', filterObj);
+        this.$store.dispatch('applyFilters');
+      }
     }
   };
 </script>
