@@ -3,11 +3,11 @@
         <div class="left_column">
             <router-link id="home-link" to="/"><img class="left_column" src="../assets/images/AMRLogo.png"></router-link>
             <nav class="nav-bar">
-                <a @mouseover="addTab=true" @mouseleave="addTab=false" class="nav-item" href="#">
+                <a @mouseover="addTab=true" @mouseleave="addTab=false" class="nav-item">
                     <i class="fas fa-plus fa-lg"></i>
                     <transition name="fade">
-                        <nav class="profile-tab_left" v-if="addTab" @click="addTab = false">
-                            <router-link id="dragdroppublication-link" to="/dragdroppublication" style="background: var(--dropdown-header-color); color: white;">Add New</router-link>
+                        <nav class="profile-tab_left" v-if="addTab" @click="addTab = false" >
+                            <router-link id="upload-link" to="/upload" v-if="authenticated">Add New</router-link>
                             <a href="#">Research</a>
                             <router-link id="createnewproject-link" to="/createnewproject"><a href="#">Project</a></router-link>
                             <a href="#">Course</a>
@@ -110,7 +110,8 @@
                             <a href="#">Privacy</a>
                             <a href="#">About</a>
                             <hr/>
-                            <a href="#">Sign Out</a>
+                            <a @click="login()" v-if="!authenticated">Login</a>
+                            <a @click="logout()" v-else>Log out</a>
                         </nav>
                     </transition>
                 </a>
@@ -120,6 +121,8 @@
 </template>
 
 <script>
+import {mapActions, mapGetters} from 'vuex'
+
     export default {
         data() {
             return {
@@ -135,11 +138,13 @@
         },
         methods: {
             sendSearchRequest() {
-                var searchArr = this.searchInput.split(' ');
+                var searchArr = this.searchInput.trim().split(' ');
                 this.$store.commit('SET_KEYWORDS', searchArr);
                 this.$store.dispatch('searchKeywords');
-            }
-        }
+            },
+            ...mapActions(['login', 'logout'])
+        },
+        computed: mapGetters(['authenticated'])
     };
 </script>
 
