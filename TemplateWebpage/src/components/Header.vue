@@ -1,15 +1,18 @@
 <template>
     <div id="header">
+        <div class="padding_left"></div>
         <div class="left_column">
-            <router-link id="home-link" to="/"><img class="left_column" src="../assets/images/AMRLogo.png"></router-link>
+            <router-link id="home-link" to="/"><img class="left_column" src="../assets/images/AMRLogo.png">
+            </router-link>
             <nav class="nav-bar">
                 <a @mouseover="addTab=true" @mouseleave="addTab=false" class="nav-item">
                     <i class="fas fa-plus fa-lg"></i>
                     <transition name="fade">
-                        <nav class="profile-tab_left" v-if="addTab" @click="addTab = false" >
+                        <nav class="profile-tab_left" v-if="addTab" @click="addTab = false">
                             <router-link id="upload-link" to="/upload" v-if="authenticated">Add New</router-link>
                             <a href="#">Research</a>
-                            <router-link id="createnewproject-link" to="/createnewproject"><a href="#">Project</a></router-link>
+                            <router-link id="createnewproject-link" to="/createnewproject"><a href="#">Project</a>
+                            </router-link>
                             <a href="#">Course</a>
                             <a href="#">Blog</a>
                             <a href="#">Jobs</a>
@@ -51,7 +54,7 @@
                 <a @mouseover="readingListTab=true" @mouseleave="readingListTab=false" class="nav-item" href="#">
                     <i class="fas fa-book-open fa-lg"></i>
                     <transition name="fade">
-                        <div class="icon_containier" v-if="readingListTab" @click="readingListTab = false">
+                        <div class="icon_container" v-if="readingListTab" @click="readingListTab = false">
                             <div class="icon_header">
                                 Reading List
                             </div>
@@ -64,7 +67,7 @@
                 <a @mouseover="friendsTab=true" @mouseleave="friendsTab=false" class="nav-item" href="#">
                     <i class="fas fa-user-friends fa-lg"></i>
                     <transition name="fade">
-                        <div class="icon_containier" v-if="friendsTab" @click="friendsTab = false">
+                        <div class="icon_container" v-if="friendsTab" @click="friendsTab = false">
                             <div class="icon_header">
                                 Friends
                             </div>
@@ -77,7 +80,7 @@
                 <a @mouseover="messageTab=true" @mouseleave="messageTab=false" class="nav-item" href="#">
                     <i class="fas fa-envelope fa-lg"></i>
                     <transition name="fade">
-                        <div class="icon_containier" v-if="messageTab" @click="messageTab = false">
+                        <div class="icon_container" v-if="messageTab" @click="messageTab = false">
                             <div class="icon_header">
                                 Messages
                             </div>
@@ -90,7 +93,7 @@
                 <a @mouseover="notificationTab=true" @mouseleave="notificationTab=false" class="nav-item" href="#">
                     <i class="fas fa-bell fa-lg"></i>
                     <transition name="fade">
-                        <div class="icon_containier" v-if="notificationTab" @click="notificationTab = false">
+                        <div class="icon_container" v-if="notificationTab" @click="notificationTab = false">
                             <div class="icon_header">
                                 Notifications
                             </div>
@@ -104,7 +107,9 @@
                     <i class="fas fa-user-circle fa-lg"></i>
                     <transition name="fade">
                         <nav class="profile-tab_right" v-if="profileTabState" @click="profileTabState=false">
-                            <router-link id="profile-link" to="/profile" style="background: var(--dropdown-header-color); color: white;">Profile</router-link>
+                            <router-link id="profile-link" to="/profile"
+                                         style="background: var(--dropdown-header-color); color: white;">Profile
+                            </router-link>
                             <a href="#">Help</a>
                             <router-link id="settings-link" to="/settings">Settings</router-link>
                             <a href="#">Privacy</a>
@@ -117,11 +122,12 @@
                 </a>
             </nav>
         </div>
+        <div class="padding_left"></div>
     </div>
 </template>
 
 <script>
-import {mapActions, mapGetters} from 'vuex'
+    import {mapActions, mapGetters} from 'vuex'
 
     export default {
         data() {
@@ -138,7 +144,7 @@ import {mapActions, mapGetters} from 'vuex'
         },
         methods: {
             sendSearchRequest() {
-                var searchArr = this.searchInput.trim().split(' ');
+                let searchArr = this.searchInput.trim().split(' ');
                 this.$store.commit('SET_KEYWORDS', searchArr);
                 this.$store.dispatch('searchKeywords');
             },
@@ -150,6 +156,19 @@ import {mapActions, mapGetters} from 'vuex'
 
 <style scoped>
     @import "../assets/css/mainpage.css";
+
+    .padding_left {
+        height: 100%;
+        flex: 1 1 auto;
+    }
+
+    /*.content_window {*/
+    /*    display: flex;*/
+    /*    height: 100%;*/
+    /*    width: inherit;*/
+    /*    max-width: 1400px;*/
+    /*    margin: 0 auto;*/
+    /*}*/
 
     #header {
         display: flex;
@@ -252,7 +271,7 @@ import {mapActions, mapGetters} from 'vuex'
         margin: 0;
     }
 
-    .icon_containier{
+    .icon_container {
         position: absolute;
         right: 0;
         top: 130%;
@@ -265,14 +284,14 @@ import {mapActions, mapGetters} from 'vuex'
         background: var(--card-background);
     }
 
-    .icon_header{
+    .icon_header {
         background: var(--dropdown-header-color);
         padding: 5px;
         color: white;
         font-size: 18px;
     }
-    
-    .icon_container_content{
+
+    .icon_container_content {
         color: black;
         padding: 16px;
         font-size: 16px;
