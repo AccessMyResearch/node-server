@@ -9,7 +9,7 @@
                         <nav class="profile-tab_left" v-if="addTab" @click="addTab = false" >
                             <router-link id="upload-link" to="/upload" v-if="authenticated">Add New</router-link>
                             <a href="#">Research</a>
-                            <a href="#">Project</a>
+                            <router-link id="createnewproject-link" to="/createnewproject"><a href="#">Project</a></router-link>
                             <a href="#">Course</a>
                             <a href="#">Blog</a>
                             <a href="#">Jobs</a>
@@ -20,7 +20,7 @@
                     <i class="fas fa-dollar-sign fa-lg"></i>
                     <transition name="fade">
                         <nav class=" profile-tab_left" v-if="donateTab" @click="donateTab = false">
-                            <a href="#">Donate</a>
+                            <a href="#" style="background: var(--dropdown-header-color); color: white;">Donate</a>
                             <a href="#">$1</a>
                             <a href="#">$5</a>
                             <a href="#">$10</a>
@@ -104,9 +104,9 @@
                     <i class="fas fa-user-circle fa-lg"></i>
                     <transition name="fade">
                         <nav class="profile-tab_right" v-if="profileTabState" @click="profileTabState=false">
-                            <router-link id="profile-link" to="/profile">Profile</router-link>
+                            <router-link id="profile-link" to="/profile" style="background: var(--dropdown-header-color); color: white;">Profile</router-link>
                             <a href="#">Help</a>
-                            <a href="#">Settings</a>
+                            <router-link id="settings-link" to="/settings">Settings</router-link>
                             <a href="#">Privacy</a>
                             <a href="#">About</a>
                             <hr/>
@@ -266,9 +266,9 @@ import {mapActions, mapGetters} from 'vuex'
     }
 
     .icon_header{
-        background: rgb(97, 91, 81);
+        background: var(--dropdown-header-color);
         padding: 5px;
-        color: black;
+        color: white;
         font-size: 18px;
     }
     
