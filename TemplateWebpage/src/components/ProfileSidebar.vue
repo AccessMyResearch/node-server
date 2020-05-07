@@ -4,10 +4,10 @@
         <img class="card-img-top" src="../assets/images/blackprofile.png" alt="Card Image Cap">
       </div>
       <div class="button_group">
-        <button type="button" class="btn btn-secondary">Statistics<i class="icons fas fa-chart-bar"></i></button>
-        <button type="button" class="btn btn-secondary">Overview<i class="icons fas fa-ellipsis-v"></i></button>
-        <button type="button" class="btn btn-secondary">Publications<i class="icons fas fa-book-reader"></i></button>
-        <button type="button" class="btn btn-secondary">Grants<i class="icons fas fa-search-dollar"></i></button>
+        <button type="button" class="btn btn-secondary">Statistics</button>
+        <button type="button" class="btn btn-secondary">Overview</button>
+        <button type="button" class="btn btn-secondary">Publications</button>
+        <button type="button" class="btn btn-secondary">Grants</button>
       </div>
   </div>
 </template>

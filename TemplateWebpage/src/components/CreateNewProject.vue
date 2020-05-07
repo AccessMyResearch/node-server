@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="newProject">
         <div class="min-vh-100 center">
             <div class="row text-black">
                 <div class="project_card col-lg-6 col-md-8 mx-auto form p-4">
@@ -36,15 +36,13 @@
 
 <style scoped>
 
+#newProject{
+    padding-top: 50px;
+}
 
 .project_card{
   background-color: var(--card-background);
   border-radius: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  margin: 0 auto;
 }
 </style>

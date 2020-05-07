@@ -2,7 +2,7 @@
   <div class="general">
     <div class="settings_menu card">
       <div class="card-header">
-        General
+        Privacy
       </div>
       <div class="main_card_body">
         <div class="card-body main text-center">

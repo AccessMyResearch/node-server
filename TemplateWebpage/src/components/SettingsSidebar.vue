@@ -1,8 +1,8 @@
 <template>
   <div class="left_column">
       <div class="button_group">
-        <button type="button" class="btn btn-secondary btn-lg">General</button>
-        <button type="button" class="btn btn-secondary btn-lg">Privacy</button>
+        <button type="button" v-on:click="displayGeneral" class="btn btn-secondary btn-lg">General</button>
+        <button type="button" v-on:click="displayPrivacy" class="btn btn-secondary btn-lg">Privacy</button>
         <button type="button" class="btn btn-secondary btn-lg">Localization</button>
         <button type="button" class="btn btn-secondary btn-lg">Notifications</button>
         <button type="button" class="btn btn-secondary btn-lg">Payments</button>
@@ -11,8 +11,27 @@
 </template>
 
 <script>
+  import Slider from './YearDoubleSlider.vue';
 
+  export default {
+    data() {
+      return {
+        displayGeneralValue: false,
+        disaplyPrivacyvalue: false
+      };
+    },methods: {
+      displayGeneral(){
+        displayGeneralValue = true;
+        disaplyPrivacyvalue = false;
+      },
+      displayPrivacy(){
+        displayGeneralValue = false;
+        disaplyPrivacyvalue = true;
+      }
+    },
+  };
 </script>
+
 
 
 <style scoped>

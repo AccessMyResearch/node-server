@@ -64,7 +64,6 @@ p, h5 {
 
 .right_column {
     height: 100%;
-    float: right;
     flex: 0 0 200px;
 }
 
