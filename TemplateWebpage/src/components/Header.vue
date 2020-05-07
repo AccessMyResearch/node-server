@@ -7,7 +7,7 @@
                     <i class="fas fa-plus fa-lg"></i>
                     <transition name="fade">
                         <nav class="profile-tab_left" v-if="addTab" @click="addTab = false" >
-                            <router-link id="upload-link" to="/upload" v-if="authenticated">Add New</router-link>
+                            <router-link id="upload-link" to="/upload" style="background: var(--dropdown-header-color); color: white;" v-if="authenticated">Add New</router-link>
                             <a href="#">Research</a>
                             <router-link id="createnewproject-link" to="/createnewproject"><a href="#">Project</a></router-link>
                             <a href="#">Course</a>
