@@ -1,6 +1,6 @@
 <template>
     <div class="article-card">
-        <div class="article-card-head">
+        <div class="article-card-head" @click="showArticle = !showArticle">
             <div class="article-card-middle">
                 <h5 class="article-title">
                     <a :href="article.url">{{article.title}}</a>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="article-card-right">
-                <div class="arrow-container" @click="showArticle = !showArticle">
+                <div class="arrow-container">
                     <i class="fas fa-chevron-down" v-if="!showArticle"></i>
                     <i class="fas fa-chevron-up" v-else></i>
                 </div>
@@ -114,18 +114,14 @@
     }
 
     .expanded-card-icons {
-      display: flex;
-      flex-flow: column;
-      width: 100%;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
     }
 
     .expanded-card-icons .fas {
-      width: fit-content;
-      margin: 5px auto;
-    }
-
-    p, h5 {
-        margin-bottom: 0;
+        width: fit-content;
+        margin: 5px auto;
     }
 
     .expand-enter-active, .expand-leave-active {

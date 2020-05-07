@@ -34,6 +34,10 @@ body, html, #app {
     font-family: 'Roboto', sans-serif;
 }
 
+p, h5 {
+    margin-bottom: 0;
+}
+
 #app {
     display: flex;
     flex-flow: column;
@@ -54,7 +58,7 @@ body, html, #app {
 
 .middle_column {
     height: 100%;
-    flex: 1 1 auto;
+    flex: 0 1 1000px;
     display: flex;
 }
 
