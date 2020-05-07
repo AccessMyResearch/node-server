@@ -16,16 +16,27 @@ const mutations = {
 
 const actions = {
     'searchKeywords': ({commit}) => {
-        Vue.http.post('api/getPublications', {'searchKeywords': state.keywords},
-            {headers: {'Content-Type': 'application/json'
-        }}).then(response => {
-            return response.json();
-        }).then(data => {
-            commit('SET_ARTICLES', data);
-        });
+        if(state.keywords[0] === "") {
+            Vue.http.post('api/getPublications', {}, {headers:
+            {
+                'Content-Type': 'application/json'
+            }}).then(response => {
+                return response.json();
+            }).then(data => {
+                commit('SET_ARTICLES', data);
+            });
+        } else {
+            Vue.http.post('api/getPublications', {'searchKeywords': state.keywords},
+                {headers: {'Content-Type': 'application/json'
+            }}).then(response => {
+                return response.json();
+            }).then(data => {
+                commit('SET_ARTICLES', data);
+            });
+        }
     },
     'applyFilters': ({commit}) => {
-        Vue.http.post('api/getPublications', {'searchKeywords': state.keywords, 'filters': state.filters},
+        Vue.http.post('api/getPublications', {'filters': state.filters},
             {headers: {'Content-Type': 'application/json'
         }}).then(response => {
             return response.json();

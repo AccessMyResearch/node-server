@@ -17,6 +17,7 @@
                             <input type="text" class="form-control" v-model="min" placeholder="Min"/>
                             <input type="text" class="form-control" v-model="max" placeholder="Max"/>
                         </div>
+                      <button type="button" @click="makeFilterRequest" class="btn btn-primary">Apply</button>
                     </div>
                 </div>
             </div>
@@ -53,8 +54,6 @@
                     </ul>
                 </div>
             </div>
-
-            <button type="button" @click="makeFilterRequest" class="collapsible sidenav">Apply Filter(s)</button>
 
             <div class="toggle_off float-right" v-if="sidebarDisplay">
                 <i @click="sidebarDisplay = !sidebarDisplay" class="fas fa-compress-alt"></i>

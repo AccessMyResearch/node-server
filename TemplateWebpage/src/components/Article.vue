@@ -3,7 +3,7 @@
         <div class="article-card-head" @click="showArticle = !showArticle">
             <div class="article-card-middle">
                 <h5 class="article-title">
-                    <a :href="article.url">{{article.title}}</a>
+                    <a :href="article.url" target="_blank">{{article.title}}</a>
                 </h5>
                 <div class="article-info text-muted">
                     <p>
