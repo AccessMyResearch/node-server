@@ -1,12 +1,10 @@
 <template>
   <div>
     <div class="body">
+      <div class="padding_left"></div>
       <app-settings-sidebar></app-settings-sidebar>
-      <div class="middle_column">
-        <component v-bind:is="component"></component>
-        <button v-on:click="component='appGeneralSettings'">Click Me</button>
-        <button v-on:click="component='appPrivacySettings'">Click  2</button>
-      </div>
+      <component v-bind:is="component"></component>
+      <div class="padding_left"></div>
     </div>
   </div>
 </template>
@@ -32,4 +30,10 @@ export default {
 
 <style scoped>
   @import '../assets/css/mainpage.css';
+
+  .padding_left{
+      height: 100%;
+      flex: 1 1 auto;
+  }
+
 </style>

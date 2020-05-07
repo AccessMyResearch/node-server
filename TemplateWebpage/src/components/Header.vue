@@ -2,7 +2,7 @@
     <div id="header">
         <div class="padding_left"></div>
         <div class="left_column">
-            <router-link id="home-link" to="/"><img class="left_column" src="../assets/images/AMRLogo.png">
+            <router-link id="home-link" to="/"><img class="left_column" src="../assets/images/AMRLogoWText.png" width="125" height="25">
             </router-link>
             <nav class="nav-bar">
                 <a @mouseover="addTab=true" @mouseleave="addTab=false" class="nav-item">
@@ -10,7 +10,7 @@
                     <transition name="fade">
                         <nav class="profile-tab_left" v-if="addTab" @click="addTab = false" >
                             <router-link id="upload-link" to="/upload" style="background: var(--dropdown-header-color); color: white;" v-if="authenticated">Add New</router-link>
-                            <a href="#">Research</a>
+                            <router-link id="dragdroppublication-link" to="/dragdroppublication">Research</router-link>
                             <router-link id="createnewproject-link" to="/createnewproject"><a href="#">Project</a>
                             </router-link>
                             <a href="#">Course</a>
@@ -110,9 +110,8 @@
                             <router-link id="profile-link" to="/profile"
                                          style="background: var(--dropdown-header-color); color: white;">Profile
                             </router-link>
-                            <a href="#">Help</a>
                             <router-link id="settings-link" to="/settings">Settings</router-link>
-                            <a href="#">Privacy</a>
+                            <a href="#">Help</a>
                             <a href="#">About</a>
                             <hr/>
                             <a @click="login()" v-if="!authenticated">Login</a>

@@ -1,5 +1,5 @@
 <template>
-  <div>      
+  <div id="research_drag">      
     <div class="drag_and_drop row text-black card col-lg-6 col-md-8 mx-auto">
       <div class="h2 text-center card-header">
           Upload
@@ -113,6 +113,10 @@ export default {
 
 <style scoped>
 
+#research_drag{
+  padding-top: 50px;
+}
+
 .card-header{
   display: flex;
   width: 80%;
@@ -130,111 +134,106 @@ export default {
   padding-left: 20px;
 }
 
-  .drag_and_drop{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -moz-transform: translateX(-50%) translateY(-50%);
-      -webkit-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
-      width:70%;
-      background-color: var(--card-background);
-      border-radius: 15px;
-  }
+.drag_and_drop{
+  margin: 0 auto;
+  width:70%;
+  background-color: var(--card-background);
+  border-radius: 15px;
+}
 
 
-  .dropzone{
-    width: 100%;
-    height: 600px;
-    position: relative;
-    border: 2px dashed #000;
-  }
+.dropzone{
+  width: 100%;
+  height: 600px;
+  position: relative;
+  border: 2px dashed #000;
+}
 
-  .dropzone:hover {
-    border: 2px solid #2e94c4;
-  }
+.dropzone:hover {
+  border: 2px solid #2e94c4;
+}
 
-  .dropzone:hover .dropzone-here {
-    color: #1975A0;
-  }
+.dropzone:hover .dropzone-here {
+  color: #1975A0;
+}
 
-  .inser_file_information {
-    width: 100%;
-    top: 50%;
-    text-align: center;
-    color: #A8A8A8;
-    position: absolute;
-    transform: translate(0, -50%);
-  }
+.inser_file_information {
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  color: #A8A8A8;
+  position: absolute;
+  transform: translate(0, -50%);
+}
 
 
-  .dropzone input {
-    position: absolute;
-    cursor: pointer;
-    top: 0px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
+.dropzone input {
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
 
-  .file_type_warning {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-  }
+.file_type_warning {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
 
-  .dropzone-over {
-    background: #5C5C5C;
-    opacity: 0.8;
-  }
+.dropzone-over {
+  background: #5C5C5C;
+  opacity: 0.8;
+}
 
-  .dropzone-uploaded {
-    width: 100%;
-    height: 200px;
-    position: relative;
-    border: 2px dashed rgb(3, 3, 3);
-  }
+.dropzone-uploaded {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border: 2px dashed rgb(3, 3, 3);
+}
 
-  .dropzone-uploaded-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #A8A8A8;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translate(0, -50%);
-    text-align: center;
-  }
+.dropzone-uploaded-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #A8A8A8;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translate(0, -50%);
+  text-align: center;
+}
 
-  .remove_file_button {
-    width: 200px;
-  }
+.remove_file_button {
+  width: 200px;
+}
 
-  .submit_button{
-    margin: auto;
-    padding-top: 10px;
-    float: right;
-  }
+.submit_button{
+  margin: auto;
+  padding-top: 10px;
+  float: right;
+}
 
-  .sidenav{
-    background-color: #dddddd;
-  }
+.sidenav{
+  background-color: #dddddd;
+}
 
-  .collapsible {
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    font-weight: 500;
-  }
+.collapsible {
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+}
 
-  .active, .collapsible:hover {
-    background-color: rgb(175, 175, 175);
-  }
+.active, .collapsible:hover {
+  background-color: rgb(175, 175, 175);
+}
 </style>
